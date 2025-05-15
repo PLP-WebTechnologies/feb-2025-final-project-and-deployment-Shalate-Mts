@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shop - Lallate Creations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Mali&family=Open+Sans&family=Parisienne&family=Source+Sans+Pro&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="shop.css">
 </head>
@@ -31,11 +32,94 @@
     </nav>
   </header>
   <main>
-    <h1>Our Products</h1>
+    <section class="section">
+      <div class="overlay">
+        <h1>Shop</h1>
+        <p>Discover our unique products</p>
+      </div>
+    </section>    
     <div id="productList" class="product-list"></div>
   </main>
+  <main>
+    <div class="shop-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h3>Filter By</h3>
+        <div class="filter-section">
+          <h4>Category</h4>
+          <label><input type="checkbox" name="category" value="candles"> Candles</label><br>
+          <label><input type="checkbox" name="category" value="diffusers"> Diffusers</label><br>
+          <label><input type="checkbox" name="category" value="gifts"> Gifts</label>
+        </div>
+        <div class="filter-section">
+          <h4>Price</h4>
+          <label>Min: <input type="number" min="0" placeholder="0" class="price-min"></label><br>
+          <label>Max: <input type="number" min="0" placeholder="500" class="price-max"></label>
+        </div>
+        <button class="filter-btn">Apply Filters</button>
+      </aside>
+
+      <!-- Product List -->
+      <section class="product-list">
+        <div class="product-item">
+          <img src="https://media.istockphoto.com/id/1488950619/photo/minimalist-candle-mockup-amber-glass-candle-jar-with-golden-lid-open-design-ready-3d-render.jpg?s=612x612&w=0&k=20&c=TEZ_SnK8XutwkrhnA1cZwvarcM9KJ7yikok5JqtAbHI=" alt="Product 1">
+          <h3>Elegant Candle</h3>
+          <p>Candles</p>
+          <p>R150</p>
+        </div>
+        <div class="product-item">
+          <img src="https://media.istockphoto.com/id/1452676505/photo/beautiful-handmade-colored-wax-candles.jpg?s=612x612&w=0&k=20&c=Xk-D-W1xcyrg-CSUSYQl6y4kAkUx5Us7__O2JhADTWI=" alt="Product 2">
+          <h3>Decorative Candle</h3>
+          <p>Candles</p>
+          <p>R250</p>
+        </div>
+        <div class="product-item">
+          <img src="https://media.istockphoto.com/id/2195261697/photo/aromatic-reed-air-freshener-isolated-on-white-background-diffuser-with-natural-fruity-floral.jpg?s=612x612&w=0&k=20&c=LwlDLzAN83DzqgOkBTtAwMxVVpLfLjRnSVZGKR29w2k=" alt="Product 3">
+          <h3>Reed Diffuser</h3>
+          <p>Diffusers</p>
+          <p>R60</p>
+        </div>
+        <div class="product-item">
+          <img src="https://media.istockphoto.com/id/1199473598/photo/blank-reed-diffuser-gift-set-boxed-aroma-rattan-stick-fragrance-scent-perfume-for-template-3d.jpg?s=612x612&w=0&k=20&c=gttAjr7zjK4uAMMQx5A9uXwN5YQ5IZ8yFf1MRNG-PXE=" alt="Product 4">
+          <h3>Gift Set</h3>
+          <p>Gifts</p>
+          <p>R320</p>
+        </div>
+        <div class="product-item">
+          <img src="https://media.istockphoto.com/id/1488950523/photo/minimalist-candle-mockup-black-ceramic-candle-jar-with-gold-lid-open-design-ready-3d-render.jpg?s=612x612&w=0&k=20&c=gju3nONeveW1hVT0_rZfTsauHN806HT4gR-XgMlOYgk=" alt="Product 5">
+          <h3>Luxury Candle</h3>
+          <p>Candles</p>
+          <p>R120</p>
+        </div>
+        <div class="product-item">
+          <img src="https://media.istockphoto.com/id/2195631957/photo/aromatic-reed-air-freshener-isolated-on-white-background-diffuser-with-natural-fruity-floral.jpg?s=612x612&w=0&k=20&c=i3Qsj8d5D_vvcG-gS1LnDNNRpN43-YJKEt7gA4v93A4=" alt="Product 6">
+          <h3>Mini Diffuser</h3>
+          <p>Diffusers</p>
+          <p>R30</p>
+        </div>
+        <div class="product-item">
+          <img src="https://media.istockphoto.com/id/1199473643/photo/blank-reed-diffuser-gift-set-boxed-aroma-rattan-stick-fragrance-scent-perfume-for-template-3d.jpg?s=612x612&w=0&k=20&c=7gLPkyfxnhsyTS5ZM2D-0xbNLdiT98yvYXsQN038fl0=" alt="Product 7">
+          <h3>Gift Candle</h3>
+          <p>Gifts</p>
+          <p>R280</p>
+        </div>
+        <div class="product-item">
+          <img src="https://media.istockphoto.com/id/1361296874/photo/blank-white-pillar-candle-in-glass-jar-mockup-side-view.jpg?s=612x612&w=0&k=20&c=AJ97Vt1vCQM7s9RLQFnmI2NWkdDy7AOCWKgiFpLUlP8=" alt="Product 8">
+          <h3>Classic Candle</h3>
+          <p>Candles</p>
+          <p>R100</p>
+        </div>
+        <div class="product-item">
+          <img src="https://media.istockphoto.com/id/2195261690/photo/aromatic-reed-air-freshener-isolated-on-white-background-diffuser-with-natural-fruity-floral.jpg?s=612x612&w=0&k=20&c=6Ym-cO1V3TLlcTb3dbb0O-bJlhY78PAJZiK-6mEQ84A=" alt="Product 9">
+          <h3>Room Diffuser</h3>
+          <p>Diffusers</p>
+          <p>R80</p>
+        </div>
+      </section>
+    </div>
+  </main>
   <footer>
-    <p>&copy; 2025 Lallate Creations</p>
+    <p>&copy; 2025 Lallate Creations - All Rights Reserved</p>
   </footer>
   <script src="shop.js"></script>
 </body>

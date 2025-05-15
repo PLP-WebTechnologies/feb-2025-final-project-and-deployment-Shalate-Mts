@@ -16,6 +16,7 @@ h1, h2 {
   font-size: 2.5em;
   color: #b0a785;
   align-items: center;
+  text-align: center;
 }
 
 h3, h4, h5, h6 {
@@ -219,7 +220,14 @@ main {
 /* Mission, Vision, values Section */
 .mvo {
   padding: 20px;
+  height: 400px;
+  margin: 30px;
 }
+
+.mvo h2 {
+  padding-bottom: 20px;
+}
+
 .tabs {
   display: flex;
   justify-content: center;
@@ -250,12 +258,13 @@ main {
   border-radius: 8px;
 }
 
-/* Hide bullet points in the Values tab */
-
 /* Reviews Section */
 .reviews {
   padding: 20px;
   background-color: #f9f9f9;
+  gap: 20px;
+  align-content: space-between;
+  margin: 30px;
 }
 .review-list {
   display: flex;
@@ -263,8 +272,97 @@ main {
   align-items: center;
 }
 .review {
-  margin-bottom: 20px;
+  margin: 20px;
   text-align: center;
+  background-color: #fff;
+}
+
+/* Carousel styles */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  height: 200px;
+}
+
+.carousel-track {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.review {
+  min-width: 100%;
+  transition: transform 0.5s;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.review.active {
+  opacity: 1;
+  position: relative;
+}
+
+/* Testimonials Carousel */
+.carousel-track {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.review {
+  flex: 1 0 100%;
+  opacity: 0;
+  transition: opacity 0.5s;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.review.active {
+  opacity: 1;
+  position: relative;
+  position: static;
+}
+
+/* Show all reviews side by side on large screens */
+@media (min-width: 900px) {
+  .carousel-track {
+    overflow: visible;
+    justify-content: center;
+  }
+  .review {
+    position: static;
+    opacity: 1;
+    flex: 1 0 0;
+    min-width: 0;
+    margin: 0 10px;
+    display: block;
+  }
+  .carousel-btn {
+    display: none;
+  }
+}
+
+.carousel-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #b0a785;
+  z-index: 2;
+  padding: 0 10px;
+  transition: color 0.3s;
+}
+
+.carousel-btn:hover {
+  color: #333;
 }
 
 /* Responsive Design */

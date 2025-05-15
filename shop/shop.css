@@ -1,23 +1,35 @@
+html, body, main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 /* Product list styling */
 .product-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  gap: 20px;
+  justify-content: flex-start;
+  flex: 1;
+  margin-top: 30px;
 }
 
 .product-item {
-  width: 30%;
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #fff;
+  width: calc(33.333% - 20px);
+  margin-bottom: 20px;
+  background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
   text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .product-item img {
   width: 100%;
   border-radius: 8px;
+  height: 180px;
+  object-fit: cover;
 }
 
 .product-item h3 {
@@ -27,4 +39,91 @@
 .product-item p {
   font-size: 1.2em;
   color: #333;
+}
+.section {
+  position: relative;
+  height: 400px; /* Full viewport height */
+  background-image: url('https://images.pexels.com/photos/3654619/pexels-photo-3654619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+.section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.644); /* Black overlay with 50% opacity */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.section h1 {
+  color:#fff;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.section p {
+  font-size: 1.2rem;
+  margin: 10px 0 0;
+}
+
+.shop-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  width: 220px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 0;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  background: #b0a785;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .shop-container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .product-item {
+    width: calc(50% - 20px);
+  }
+}
+@media (max-width: 600px) {
+  .product-item {
+    width: 100%;
+  }
 }
