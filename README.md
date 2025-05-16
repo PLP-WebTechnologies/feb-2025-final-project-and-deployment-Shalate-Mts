@@ -21,3 +21,5 @@ Welcome to the Lallate Creations web application! This project showcases our exq
 
 **Deployment**
 The Lallate Creations website is deployed using GitHub Pages. 
+follow the link to see site:
+https://plp-webtechnologies.github.io/feb-2025-final-project-and-deployment-Shalate-Mts/
